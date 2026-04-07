@@ -2,8 +2,8 @@ import requests
 from datetime import datetime, timedelta, timezone
 
 # ====== 通知設定（ここを自分の好みに書き換える） ======
-TARGET_RULES = ["ガチエリア"]
-TARGET_STAGES = ["ナメロウ金属", "マヒマヒリゾート＆スパ"]
+TARGET_RULES = ["ガチヤグラ"]
+TARGET_STAGES = ["ゴンズイ地区", "マヒマヒリゾート＆スパ"]
 NOTIFY_HOURS_BEFORE = 10 # 何時間前のタイミングで通知するか
 
 # Discord設定（ステップ1でコピーしたURLを貼る）
