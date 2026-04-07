@@ -2,17 +2,16 @@ name: Splatoon Notification
 
 on:
   schedule:
-    # 1時間に1回、0分に実行
     - cron: '0 * * * *'
-  workflow_dispatch: # 手動でテスト実行するためのボタン
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # ← v3からv4に新しくしました
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # ← v4からv5に新しくしました
         with:
           python-version: '3.10'
       - name: Install dependencies
@@ -20,4 +19,5 @@ jobs:
       - name: Run script
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python notify.py
+        # ↓↓↓ ここが一番重要です！ ↓↓↓
+        run: python splatoon-checker/notify.py
