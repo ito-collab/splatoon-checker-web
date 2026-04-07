@@ -63,10 +63,10 @@ if st.button("スケジュールを検索🔍"):
                 found_match = False
                 
                 for schedule in x_nodes:
-                    if not schedule.get('matchSetting'): continue
+                    if not schedule.get('xmatchSetting'): continue
                     
-                    rule_en = schedule['matchSetting']['vsRule']['name']
-                    stages_en = [s['name'] for s in schedule['matchSetting']['vsStages']]
+                    rule_en = schedule['xmatchSetting']['vsRule']['name']
+                    stages_en = [s['name'] for s in schedule['xmatchSetting']['vsStages']]
                     
                     # ルールが一致し、かつステージのいずれかが一致するか判定
                     if rule_en in target_rules_en:
