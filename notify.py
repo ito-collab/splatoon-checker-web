@@ -7,7 +7,7 @@ TARGET_STAGES = ["ナメロウ金属", "マヒマヒリゾート＆スパ"]
 NOTIFY_HOURS_BEFORE = 10 # 何時間前のタイミングで通知するか
 
 # Discord設定（ステップ1でコピーしたURLを貼る）
-DISCORD_WEBHOOK_URL = "ここにDiscordのWebhook_URLを貼り付ける"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1490997475593687173/qZujYiwu9xl5nluMy8UG5pcRW7eG4WiaiaW6FRHefNl_aKcOL-BXbds9Q5Nz1--D1KKJ"
 # ======================================================
 
 RULE_MAP = {"ガチエリア": "Splat Zones", "ガチヤグラ": "Tower Control", "ガチホコバトル": "Rainmaker", "ガチアサリ": "Clam Blitz"}
