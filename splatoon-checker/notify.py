@@ -1,3 +1,4 @@
+import os
 import requests
 from datetime import datetime, timedelta, timezone
 
@@ -7,7 +8,7 @@ TARGET_STAGES = ["ゴンズイ地区", "マヒマヒリゾート＆スパ"]
 NOTIFY_HOURS_BEFORE = 10 # 何時間前のタイミングで通知するか
 
 # Discord設定（ステップ1でコピーしたURLを貼る）
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1490997475593687173/qZujYiwu9xl5nluMy8UG5pcRW7eG4WiaiaW6FRHefNl_aKcOL-BXbds9Q5Nz1--D1KKJ"
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 # ======================================================
 
 RULE_MAP = {"ガチエリア": "Splat Zones", "ガチヤグラ": "Tower Control", "ガチホコバトル": "Rainmaker", "ガチアサリ": "Clam Blitz"}
