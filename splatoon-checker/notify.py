@@ -3,9 +3,9 @@ from datetime import datetime, timedelta, timezone
 import os
 
 # ====== 設定（テスト時は多めに入れるのがコツです） ======
-TARGET_RULES = ["ガチエリア", "ガチヤグラ", "ガチホコバトル", "ガチアサリ"]
-TARGET_STAGES = ["ナンプラー遺跡", "ゴンズイ地区"]
-NOTIFY_HOURS_BEFORE = 2  # 2時間後までに始まるものなら全部通知する設定に変更
+TARGET_RULES = ["ガチエリア"]
+TARGET_STAGES = ["ナメロウ金属", "マヒマヒリゾート＆スパ", "ヤガラ市場", "タカアシ経済特区"]
+NOTIFY_HOURS_BEFORE = 12  # 12時間後までに始まるものなら全部通知する設定に変更
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 # ======================================================
