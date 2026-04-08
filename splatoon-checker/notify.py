@@ -5,7 +5,7 @@ import os
 # ====== 設定（テスト時は多めに入れるのがコツです） ======
 TARGET_RULES = ["ガチエリア"]
 TARGET_STAGES = ["ナメロウ金属", "マヒマヒリゾート＆スパ", "ヤガラ市場", "タカアシ経済特区", "バイガイ亭", "クサヤ温泉"]
-NOTIFY_HOURS_BEFORE = 12  # 12時間後までに始まるものなら全部通知する設定に変更
+NOTIFY_HOURS_BEFORE = 18  # 12時間後までに始まるものなら全部通知する設定に変更
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 # ======================================================
