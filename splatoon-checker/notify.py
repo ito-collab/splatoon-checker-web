@@ -5,7 +5,7 @@ import os
 # ====== 設定（テスト時は多めに入れるのがコツです） ======
 TARGET_RULES = ["ガチエリア"]
 TARGET_STAGES = ["ナメロウ金属", "マヒマヒリゾート＆スパ", "ヤガラ市場", "タカアシ経済特区", "バイガイ亭", "クサヤ温泉"]
-NOTIFY_HOURS_BEFORE = 24  # 24時間後までに始まるものなら全部通知する設定に変更
+NOTIFY_HOURS_BEFORE = 12  # 12時間後までに始まるものなら全部通知する設定に変更
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 # ======================================================
@@ -41,7 +41,7 @@ def check_and_notify():
         diff_mins = int(time_diff.total_seconds() / 60)
         print(f"--- チェック中: {rule_en} ({diff_mins}分後開始) ---")
 
-        # 【修正】0分〜2時間以内に始まるものなら通知対象にする
+        # 【修正】0分〜n時間以内に始まるものなら通知対象にする
         if timedelta(hours=0) < time_diff <= timedelta(hours=NOTIFY_HOURS_BEFORE):
             # ルールとステージの判定
             rule_match = rule_en in [RULE_MAP[r] for r in TARGET_RULES if r in RULE_MAP]
